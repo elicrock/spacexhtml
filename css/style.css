@@ -109,39 +109,44 @@ body {
 	font-size: 18px;
 	line-height: 179.69%;
 }
+.text-gray {
+	color: #b2b0b2;
+}
 .features-text {
 	max-width: 490px;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 29px;
-	margin-bottom: 300px;
 }
 .rocket {
 	position: absolute;
 	top: 50px;
 	right: 0;
+	max-width: 300px;
 	z-index: 99;
 }
 .footer {
+	padding: 130px 0;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .footer .logo {
 	margin-bottom: 43px;
 }
-.footer .list {
-	display: flex;
-	justify-content: center;
+.footer-nav {
 	margin-bottom: 28px;
 }
-.footer .item-link {
+.footer-nav .item-link {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 21px;
 	transition: color 0.2s;
 }
-.footer .item-link:hover {
+.footer-nav .item-link:hover {
 	color: #808080;
 }
 .footer-text {
@@ -150,31 +155,96 @@ body {
 	font-size: 18px;
 	line-height: 21px;
 	color: #808080;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	margin-top: 0;
 }
-.footer-text a {
+.footer-link {
 	color: #808080;
 	text-decoration: none;
 	transition: 0.2s;
 }
-.footer-text a:hover {
+.footer-link:hover {
 	color: #ffffff;
 	text-decoration: underline;
 }
 .button {
 	display: inline-block;
+	min-width: 260px;
+	padding: 20px;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 21px;
-	padding: 20px 86px;
+	text-align: center;
 	cursor: pointer;
 	border: 2px solid #FFFFFF;
 	border-radius: 6px;
-	margin-bottom: 130px;
+	color: #ffffff;
+	text-decoration: none;
 	transition: 0.2s;
 }
 .button:hover {
 	background-color: #fff;
 	color: #010001;
+}
+
+/* Media */
+@media (max-width: 960px) {
+	.rocket {
+		max-width: 230px;
+	}
+	.table-column {
+		width: 250px;
+	}
+}
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		align-items: center;
+	}
+	.header .logo {
+		margin-bottom: 20px;
+	}
+	.header .main-nav {
+		margin-bottom: 20px;
+	}
+	.secondary-nav .item:last-child .item-link{
+		margin-right: 10px;
+	}
+	.video {
+		width: 100%;
+	}
+	.rocket {
+		max-width: 180px;
+	}
+}
+@media (max-width: 576px) {
+	.main {
+		padding-top: 50px;
+	}
+	.features {
+		padding-bottom: 0;
+	}
+	.table {
+		margin-bottom: 0;
+	}
+	.table-column {
+		font-size: 14px;
+		width: 150px;
+	}
+	.rocket {
+		position: static;
+		margin-bottom: 30px;
+	}
+	.footer {
+		text-align: center;
+	}
+	.footer-nav .list {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer-nav .item {
+		margin-bottom: 10px;
+	}
 }
